@@ -22,10 +22,13 @@
     h1 {
         text-align: center;
         color: #333;
-        font-size: 24px; /* Уменьшаем размер шрифта в половину */
+        font-size: 20px; /* Уменьшаем размер шрифта */
+        display: flex; /* Добавляем для размещения изображения и текста на одной строке */
+        align-items: center; /* Выравниваем изображение и текст по вертикали */
+        gap: 10px; /* Устанавливаем расстояние между изображением и текстом */
     }
     .pageList {
-        font-size: 20px; /* Увеличиваем размер шрифта */
+        font-size: 24px; /* Увеличиваем размер шрифта */
     }
     .pageLink {
         margin-bottom: 10px;
@@ -41,15 +44,11 @@
         color: #4CAF50;
         font-weight: bold;
     }
-    .logo {
-        width: 50px; /* Размер логотипа */
-        height: 50px;
-    }
 </style>
 </head>
 <body>
 <div class="container">
-    <h1>Youtube канал церкви євангельських християн-баптистів "Дім Євангелія" м. Суми"</h1>
+    <h1><img src="dom.jpg" alt="Логотип"> Youtube канал церкви євангельських християн-баптистів "Дім Євангелія" м. Суми"</h1>
 
     <div class="pageList">
         <p class="pageLink" onclick="openPage('1.html')">Андрій Булигін</p>
