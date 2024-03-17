@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Плеер YouTube с выбором видео</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .videoLink {
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+    .videoLink:hover {
+        color: darkblue;
+    }
+    #player {
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Церква ЄХБ "Дім Євангелія" видео плеер:</h2>
+
+	<h2>2023р.</h2>
+    <div id="videoList">
+
+        <p class="videoLink" onclick="changeVideo('Jgb0yFVOuUE')">Видео 1: "Проклятие НЕлюбящим Христа" (1Кор. 16:22). Андрей Парфило, 10.12.2023</p>
+        <p class="videoLink" onclick="changeVideo('V4Xq-uOQar4')">Видео 2: "Знакомство с Божими людьми". Андрей Парфило , 1 января 2023 года</p>
+        <p class="videoLink" onclick="changeVideo('Ll84l1w7-uE')">Видео 3: "Инструкция о церковном руководстве" Часть 1 (Титу 1:5-9). Андрей Парфило, 22 января 2023 года</p>
+        <p class="videoLink" onclick="changeVideo('9Wm53pkK5kE')">Видео 4: "Введение в тему церкви" (Деян 2:1-4). Андрей Парфило, 28 мая 2023 года</p>
+        <p class="videoLink" onclick="changeVideo('UXSOhV3fsbo')">Видео 5: "Практика здорового учения для пожилых верующих" (Тит 2:1-5). Андрей Парфило, 25.06.2023</p>
+
+
+
+    </div>
+
+
+
+
+    <div id="player">
+        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+function changeVideo(videoID) {
+    var playerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>';
+    document.getElementById("player").innerHTML = playerHTML;
+    document.getElementById("player").style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Плеер YouTube с выбором видео</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .videoLink {
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+    .videoLink:hover {
+        color: darkblue;
+    }
+    #player {
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Выберите видео:</h2>
+
+    <div id="videoList">
+        <p class="videoLink" onclick="changeVideo('3ZkuZSKX8i4')">Видео 1: "Джерело втіхи" (Псалом 3). Андрій Булигін, 10.03.2024</p>
+        <p class="videoLink" onclick="changeVideo('XU6BYo5nD5U')">Видео 2: "Бог знає все і завжди поруч" (Пс. 139). Андрій Булигін, 28.01.2024</p>
+        <p class="videoLink" onclick="changeVideo('ZGzpFUygFmo')">Видео 3: "Милість Господня" (Псалом 130). Андрій Булигін, 21.01.2024</p>
+        <p class="videoLink" onclick="changeVideo('3ftNsnRX7aQ')">Видео 4: "Чому Ти, Господи, далеко так?" (Псалом 10). Андрій Булигін, 25.02.2024</p>    
+        <p class="videoLink" onclick="changeVideo('kc_vrcOj2yo')">Видео 5: "Ходімо у Господній храм!" (Псалом 122). Андрій Булигін, 01.01.2024</p>    
+        <p class="videoLink" onclick="changeVideo('14bhoBVE7eY')">Видео 6: "Праведність: Старий / Новий Завіт" (Лук. 2). Андрій Булигін, 02.02.2024</p>    
+        <p class="videoLink" onclick="changeVideo('ZyKahgJId5M')">Видео 7: "На чиєму ти боці?" (Пс. 110 (109). Андрій Булигін, 10.12.2023</p>    
+
+    </div>
+
+    <div id="player">
+        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+function changeVideo(videoID) {
+    var playerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>';
+    document.getElementById("player").innerHTML = playerHTML;
+    document.getElementById("player").style.display = "block";
+}
+</script>
+
+</body>
+</html>

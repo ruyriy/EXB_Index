@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Плеер YouTube с выбором видео</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .videoLink {
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+    .videoLink:hover {
+        color: darkblue;
+    }
+    #player {
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Церква ЄХБ "Дім Євангелія" видео плеер:</h2>
+
+	<h2>2023р.</h2>
+    <div id="videoList">
+
+        <p class="videoLink" onclick="changeVideo('Vz-bYvn4nJE')">Видео 1: "Сурми Господнього гніву" (Мтв. 24:21; Одкр. 8-10 розд.). Віктор Лаба, 17 вересня 2023 року</p>
+        <p class="videoLink" onclick="changeVideo('eSdQLJqwIvw')">Видео 2: "Велика скорбота: зняття печатей" (Матв 24:21-25; Об'явл 6,7). Віктор Лаба, 16.07.2023</p>
+        <p class="videoLink" onclick="changeVideo('Jo2kZvVa7jA')">Видео 3: "Ми проповідуємо Христа Розп'ятого" (1Кор 1:23-31). Віктор Лаба, 26 лютого 2023 року</p>
+        <p class="videoLink" onclick="changeVideo('tprnAf-DtsY')">Видео 4: "Про події на небі після підхоплення Церкви" (Одкр.4-5 розд.). Віктор Лаба,11 червня 2023 року</p>
+        <p class="videoLink" onclick="changeVideo('RKfl6vohFoo')">Видео 5: "Послання семи церквам в Асії" (Одкр 2-3). Віктор Лаба, 14 травня 2023</p>
+
+    </div>
+
+
+
+
+    <div id="player">
+        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+function changeVideo(videoID) {
+    var playerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>';
+    document.getElementById("player").innerHTML = playerHTML;
+    document.getElementById("player").style.display = "block";
+}
+</script>
+
+</body>
+</html>

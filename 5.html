@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Плеер YouTube с выбором видео</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .videoLink {
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+    .videoLink:hover {
+        color: darkblue;
+    }
+    #player {
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Церква ЄХБ "Дім Євангелія" видео плеер:</h2>
+
+	<h2>2024р.</h2>
+
+    <div id="videoList">
+        <p class="videoLink" onclick="changeVideo('xObYpOikGo0')">Видео 1: "Почему христиане могут молчать?" (Иоанна 12:42-43). Сергей Комисар, 10.03.2024</p>
+        <p class="videoLink" onclick="changeVideo('n6s_Rpr1fsA')">Видео 2: "Почему они не веровали?" ( Иоанна 12:37-40). Сергей Комисар, 25.02.2024</p>
+   </div>
+	<h2>2023р.</h2>
+    <div id="videoList">
+        <p class="videoLink" onclick="changeVideo('ZL67TjiyNzg')">Видео 3: "Сколько прощать брату своему?" (Мтф. 18:21). Сергей Комисар, 03.12.2023</p>
+        <p class="videoLink" onclick="changeVideo('hC4Ce3YNmp8')">Видео 4: "Ибо вы к тому призваны" (1Пет 2:18-23). Сергей Комисар, 08.10.2023</p>
+        <p class="videoLink" onclick="changeVideo('ehxobrrSZCA')">Видео 4: "Кто из вас без греха?" (Иоанна 8:1-11). Сергей Комисар, 07.01.2023</p>
+     
+
+</div>
+
+
+
+
+    <div id="player">
+        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+function changeVideo(videoID) {
+    var playerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>';
+    document.getElementById("player").innerHTML = playerHTML;
+    document.getElementById("player").style.display = "block";
+}
+</script>
+
+</body>
+</html>

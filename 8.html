@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Плеер YouTube с выбором видео</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .videoLink {
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+    .videoLink:hover {
+        color: darkblue;
+    }
+    #player {
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Церква ЄХБ "Дім Євангелія" Выберите видео:</h2>
+
+    <div id="videoList">
+        <p class="videoLink" onclick="changeVideo('MRnut7NwyxE')">Видео 1: "Як жити у 2024 році?" (Филип'ян 1). Микола Марйоха, 01.01.2024"</p>
+        <p class="videoLink" onclick="changeVideo('ruU4oQq9E7w')">Видео 2: "Хрещення як союз з Христом" (Марка 16:15-16). Микола Марйоха, 06.01.2024</p>
+        <p class="videoLink" onclick="changeVideo('7_dy__UI5XM')">Видео 3: "Вечеря Господня" (1Коринтян 11:23-26). Микола Марйоха, 07.01.2024</p>
+        <p class="videoLink" onclick="changeVideo('5rDaP3nhL0s')">Видео 4: "Блаженні чисті серцем" (Матвія 5:1-8). Микола Марйоха, 14.01.2024</p>    
+        <p class="videoLink" onclick="changeVideo('pBYuaeI6aJ8')">Видео 5: "Христос - підтримка наша" (Євреїв 12:1). Микола Марйоха, 03.03.2024</p>    
+        <p class="videoLink" onclick="changeVideo('e_R1j1xyY6A')">Видео 6: "Приклад у зціленні Неємана" (2 Царів 5:1-15). Микола Марйоха, 18.02.2024</p>    
+        <p class="videoLink" onclick="changeVideo('MazuoUj3KXE')">Видео 7: "Блаженні миротворці" (Матвія 5). Микола Марйоха, 11.02.2024</p>    
+        <p class="videoLink" onclick="changeVideo('ImmyvGKAH7M')">Видео 8: "Благодать благої вісті для язичників" (Еф. 3:8-9). Микола Марйоха, 28.01.2024</p>  
+        <p class="videoLink" onclick="changeVideo('XlZ3O1G9x-0')">Видео 9: "Стрітення Господнє" (Лук. 25). Микола Марйоха, 02.02.2024 року</p>  
+
+
+
+   </div>
+
+    <div id="player">
+        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+function changeVideo(videoID) {
+    var playerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>';
+    document.getElementById("player").innerHTML = playerHTML;
+    document.getElementById("player").style.display = "block";
+}
+</script>
+
+</body>
+</html>

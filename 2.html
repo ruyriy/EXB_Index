@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Плеер YouTube с выбором видео</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .videoLink {
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+    .videoLink:hover {
+        color: darkblue;
+    }
+    #player {
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Церква ЄХБ "Дім Євангелія" видео плеер:</h2>
+
+	<h2>2023р.</h2>
+
+    <div id="videoList">
+        <p class="videoLink" onclick="changeVideo('ydoPKGAXEqI')">Видео 1: "Неизбежность страданий" (1Петра 3:13-17). Александр Иванченко, 27 августа 2023 года</p>
+        <p class="videoLink" onclick="changeVideo('uBHklCP1yuI')">Видео 2: "Качества характера необходимые для добродетельной жизни"(1Пет 3:1-15). Александр Иванченко,25.06.23</p>
+        <p class="videoLink" onclick="changeVideo('h_L5EDKTvuQ')">Видео 2: "Рассудительный брак" (1Пет 3:7). Александр Иванченко, 12 февраля 2023 года</p>
+
+   </div>
+
+
+    <div id="player">
+        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+function changeVideo(videoID) {
+    var playerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>';
+    document.getElementById("player").innerHTML = playerHTML;
+    document.getElementById("player").style.display = "block";
+}
+</script>
+
+</body>
+</html>

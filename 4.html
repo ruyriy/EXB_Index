@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Плеер YouTube с выбором видео</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .videoLink {
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+    .videoLink:hover {
+        color: darkblue;
+    }
+    #player {
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Церква ЄХБ "Дім Євангелія" видео плеер:</h2>
+
+	<h2>2024р.</h2>
+
+    <div id="videoList">
+        <p class="videoLink" onclick="changeVideo('F5OxGFIFeJY')">Видео 1: "Невірство в Божого Сина" (Івана 5:16-24). Андрій Міщенко, 18.02.2024</p>
+        <p class="videoLink" onclick="changeVideo('G_Jyd9J8vVs')">Видео 2: "Значення Іванового хрещення" (Матвія 3:1-17). Андрій Міщенко, 06.01.2024</p>
+
+   </div>
+	<h2>2023р.</h2>
+    <div id="videoList">
+	<p class="videoLink" onclick="changeVideo('3LsJRjCb69E')">Видео 3: "Незмінність Бога" (Пс. 103:15-18). Андрій Міщенко, 26.11.2023</p>
+        <p class="videoLink" onclick="changeVideo('JRXTMnQwVR0')">Видео 4: "Наш Бог - Святий" (Ісаї 6:1-7). Андрій Міщенко, 12 березня 2023 року</p>
+        <p class="videoLink" onclick="changeVideo('KsbnWKawsmI')">Видео 5: "Всезнання та всюдиприсутність Бога" (Пс. 139). Андрій Міщенко, 29.10.2023</p>
+        <p class="videoLink" onclick="changeVideo('zo8jh74k3cI')">Видео 6: "Любов Бога" (1 Ів 4:7-12). Андрій Міщенко, 10 вересня 2023 року</p>
+        <p class="videoLink" onclick="changeVideo('Tf_QHjkxDUM')">Видео 7: "Доброта Бога" (Пс 136). Андрій Міщенко, 4 червня 2023 року</p>
+        <p class="videoLink" onclick="changeVideo('rZkYQjL-pfI')">Видео 8: Якості Бога. Божа праведність і справедливість (Псалом 118:137-144). Андрій Міщенко, 30 квітня 2023</p>
+
+    </div>
+
+    <div id="player">
+        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+function changeVideo(videoID) {
+    var playerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>';
+    document.getElementById("player").innerHTML = playerHTML;
+    document.getElementById("player").style.display = "block";
+}
+</script>
+
+</body>
+</html>
