@@ -1,56 +1,74 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Плеер YouTube с выбором видео</title>
+<title>Хаб для открытия других страниц</title>
 <style>
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
     }
-    .videoLink {
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+        font-size: 24px; /* Уменьшаем размер шрифта в половину */
+    }
+    .pageList {
+        font-size: 20px; /* Увеличиваем размер шрифта */
+    }
+    .pageLink {
         margin-bottom: 10px;
         cursor: pointer;
-        color: blue;
-        text-decoration: underline;
+        color: #007bff;
+        text-decoration: none;
+        display: block;
     }
-    .videoLink:hover {
-        color: darkblue;
+    .pageLink:hover {
+        color: #0056b3;
     }
-    #player {
-        display: none;
-        margin-top: 20px;
+    .externalLink {
+        color: #4CAF50;
+        font-weight: bold;
+    }
+    .logo {
+        width: 50px; /* Размер логотипа */
+        height: 50px;
     }
 </style>
 </head>
 <body>
 <div class="container">
-    <h2>Выберите видео:</h2>
+    <h1>Youtube канал церкви євангельських християн-баптистів "Дім Євангелія" м. Суми"</h1>
 
-    <div id="videoList">
-        <p class="videoLink" onclick="changeVideo('3ZkuZSKX8i4')">Видео 1: "Джерело втіхи" (Псалом 3). Андрій Булигін, 10.03.2024</p>
-        <p class="videoLink" onclick="changeVideo('XU6BYo5nD5U')">Видео 2: "Бог знає все і завжди поруч" (Пс. 139). Андрій Булигін, 28.01.2024</p>
-        <p class="videoLink" onclick="changeVideo('ZGzpFUygFmo')">Видео 3: "Милість Господня" (Псалом 130). Андрій Булигін, 21.01.2024</p>
-        <p class="videoLink" onclick="changeVideo('3ftNsnRX7aQ')">Видео 4: "Чому Ти, Господи, далеко так?" (Псалом 10). Андрій Булигін, 25.02.2024</p>    
-        <p class="videoLink" onclick="changeVideo('kc_vrcOj2yo')">Видео 5: "Ходімо у Господній храм!" (Псалом 122). Андрій Булигін, 01.01.2024</p>    
-        <p class="videoLink" onclick="changeVideo('14bhoBVE7eY')">Видео 6: "Праведність: Старий / Новий Завіт" (Лук. 2). Андрій Булигін, 02.02.2024</p>    
-        <p class="videoLink" onclick="changeVideo('ZyKahgJId5M')">Видео 7: "На чиєму ти боці?" (Пс. 110 (109). Андрій Булигін, 10.12.2023</p>    
-
-    </div>
-
-    <div id="player">
-        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    <div class="pageList">
+        <p class="pageLink" onclick="openPage('1.html')">Андрій Булигін</p>
+        <p class="pageLink" onclick="openPage('2.html')">Александр Иванченко</p>
+        <p class="pageLink" onclick="openPage('3.html')">Андрій Міщенко</p>
+        <p class="pageLink" onclick="openPage('4.html')">Віталій Зінченко</p>
+        <p class="pageLink" onclick="openPage('5.html')">Сергей Комисар</p>
+        <p class="pageLink" onclick="openPage('6.html')">Андрей Парфило</p>
+        <p class="pageLink" onclick="openPage('7.html')">Віктор Лаба</p>
+        <p class="pageLink" onclick="openPage('8.html')">Микола Марйоха</p>
+        <hr> <!-- Горизонтальная черта для отделения -->
+        <a href="https://www.facebook.com/pravdachurch" target="_blank"><img src="f.png" alt="Facebook" class="logo"></a>
+        <a href="https://www.instagram.com/pravda.church/" target="_blank"><img src="i.png" alt="Instagram" class="logo"></a>
     </div>
 </div>
 
 <script>
-function changeVideo(videoID) {
-    var playerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>';
-    document.getElementById("player").innerHTML = playerHTML;
-    document.getElementById("player").style.display = "block";
+function openPage(pageName) {
+    window.location.href = pageName;
 }
 </script>
 
