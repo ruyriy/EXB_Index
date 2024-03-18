@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Хаб для открытия других страниц</title>
+<title>Церковне служіння - Церква "Дім Євангелія" м. Суми</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -22,13 +22,11 @@
     h1 {
         text-align: center;
         color: #333;
-        font-size: 24px; /* Уменьшаем размер шрифта */
-        display: flex; /* Добавляем для размещения изображения и текста на одной строке */
-        align-items: center; /* Выравниваем изображение и текст по вертикали */
-        gap: 10px; /* Устанавливаем расстояние между изображением и текстом */
+        font-size: 24px;
     }
     .pageList {
-        font-size: 18px; /* Увеличиваем размер шрифта */
+        font-size: 18px;
+        text-align: center;
     }
     .pageLink {
         margin-bottom: 10px;
@@ -36,41 +34,38 @@
         color: #007bff;
         text-decoration: none;
         display: block;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        padding: 10px;
+        transition: background-color 0.3s, color 0.3s;
     }
     .pageLink:hover {
-        color: #0056b3;
+        background-color: #007bff;
+        color: #fff;
     }
-    .externalLink {
-        color: #4CAF50;
-        font-weight: bold;
+    .address {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 20px;
     }
 </style>
 </head>
 <body>
 <div class="container">
-    <img src="dom.jpg" alt="Логотип"> <!-- Перемещаем картинку сюда -->
-    <h1>Youtube канал церкви євангельських християн-баптистів "Дім Євангелія" м. Суми"</h1>
+    <h1>Церковне служіння - Церква "Дім Євангелія" м. Суми</h1>
 
     <div class="pageList">
-        <p class="pageLink" onclick="openPage('1.html')">Андрій Булигін</p>
-        <p class="pageLink" onclick="openPage('2.html')">Александр Иванченко</p>
-        <p class="pageLink" onclick="openPage('3.html')">Андрій Міщенко</p>
-        <p class="pageLink" onclick="openPage('4.html')">Віталій Зінченко</p>
-        <p class="pageLink" onclick="openPage('5.html')">Сергей Комисар</p>
-        <p class="pageLink" onclick="openPage('6.html')">Андрей Парфило</p>
-        <p class="pageLink" onclick="openPage('7.html')">Віктор Лаба</p>
-        <p class="pageLink" onclick="openPage('8.html')">Микола Марйоха</p>
-        <hr> <!-- Горизонтальная черта для отделения -->
-        <a href="https://www.facebook.com/pravdachurch" target="_blank"><img src="f.png" alt="Facebook" class="logo"></a>
-        <a href="https://www.instagram.com/pravda.church/" target="_blank"><img src="i.png" alt="Instagram" class="logo"></a>
+        <a href="index1.html" class="pageLink">1. Проповіді</a>
+        <a href="index2.html" class="pageLink">2. Пісні та поклоніння</a>
+        <a href="index3.html" class="pageLink">3. Прославлення</a>
+        <a href="index4.html" class="pageLink">4. Служіння спільноти</a>
+        <a href="index5.html" class="pageLink">5. Молитва та пост</a>
     </div>
+    
+    <a href="https://www.facebook.com/pravdachurch" target="_blank"><img src="f.png" alt="Facebook" class="logo"> Facebook</a>
+    <a href="https://www.instagram.com/pravda.church/" target="_blank"><img src="i.png" alt="Instagram" class="logo"> Instagram</a>
+    <p class="address">пров. Іоанна Хрестителя, 14, Суми, 0542-25-51-88</p>
 </div>
-
-<script>
-function openPage(pageName) {
-    window.location.href = pageName;
-}
-</script>
 
 </body>
 </html>
